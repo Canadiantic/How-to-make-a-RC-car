@@ -4,26 +4,47 @@
 This guide outlines how to setup the controller and motorised components of an RC vehicle, this guide can be used as part of an outline for how to create a DIY remote control car. Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → here - Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
 
 ### Components:
-2 arduinos (one for transmitting and one for receiving)
+* 2 arduinos (one for transmitting and one for receiving)
 
-2 nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
+![](Images/Arduino.jpg)
 
-Male to Female Jump wires (you’ll need 10)
+* 2 nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
 
-Male to Male Jumper wires
+![](Images/nrf24l01.jpg)
 
-2 joysticks
+* Male to Female Jump wires (you’ll need 10)
 
-1 bread board
+![](Images/maletofemalepins.jpg)
 
-2 motors(with wheels)
+* Male to Male Jumper wires
 
-Chassis base
+![](Images/maletomalepins.jpg)
 
-H-bridge (using a shield is easier but we will cover both in this tutorial)
+* 2 joysticks
 
-1 swivel caster
+![](Images/joystick.jpg)
 
+* 1 bread board
+
+![](Images/breadboard.jpg)
+
+* 2 motors(with wheels)
+
+![](Images/Motorwithwheel.jpg)
+
+* Chassis base
+
+![](Images/Chassisbase.png)
+
+* H-bridge (using a shield is easier but we will cover both in this tutorial)
+
+![](Images/H-bridgeshield.jpg)
+
+![](Images/H-bridgecomponent.png)
+
+* 1 swivel caster
+
+![](Images/swivelcaster.jpg)
 
 There are many other ways to create an RC car, this is merely one of many potential designs 
 
