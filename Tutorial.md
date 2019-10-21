@@ -6,45 +6,45 @@ This guide outlines how to setup the controller and motorised components of an R
 ### Components:
 * 2 arduinos (one for transmitting and one for receiving)
 
-<img src="Images/Arduino.jpg" width="300"  height="300">
+<img src="Images/Arduino.jpg" width="300">
 
 * 2 nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
 
-![](Images/nrf24l01.jpg)
+<img src="Images/nrf24l01.jpg" width="300">
 
 * Male to Female Jump wires (you’ll need 10)
 
-![](Images/maletofemalepins.jpg)
+<img src="Images/maletofemalepins.jpg" width="300">
 
 * Male to Male Jumper wires
 
-![](Images/maletomalepins.jpg)
+<img src="Images/maletomalepins.jpg" width="300">
 
 * 2 joysticks
 
-![](Images/joystick.jpg)
+<img src="Images/joystick.jpg" width="300">
 
 * 1 bread board
 
-![](Images/breadboard.jpg)
+<img src="Images/breadboard.jpg" width="300">
 
 * 2 motors(with wheels)
 
-![](Images/Motorwithwheel.jpg)
+<img src="Images/Motorwithwheel.jpg" width="300">
 
 * Chassis base
 
-![](Images/Chassisbase.png)
+<img src="Images/Chassisbase.png" width="300">
 
 * H-bridge (using a shield is easier but we will cover both in this tutorial)
 
-![](Images/H-bridgeshield.jpg)
+<img src="Images/H-bridgeshield.jpg" width="300">
 
-![](Images/H-bridgecomponent.png)
+<img src="Images/H-bridgecomponent.png" width="300">
 
 * 1 swivel caster
 
-![](Images/swivelcaster.jpg)
+<img src="Images/swivelcaster.jpg" width="300">
 
 There are many other ways to create an RC car, this is merely one of many potential designs 
 
@@ -62,13 +62,22 @@ It would be fair to say that if the chassis doesn’t work your likely hood of c
 
 The way the controller will work is by collecting 2 analog signals; one to indicate speed and the other to indicate direction. We will also have to construct the controller in a way where we can output the signals to the car
 
-<img src="Images/barebonesController.png" width="400">
+<img src="Images/barebonesController.png" width="300">
 
 The radio frequency control relies on the nrf24L01 Transciver module to transimit packages of data from the controller
-![](Images/nrf24L01Transciverdiagram.png)
+<img src="Images/nrf24L01Transciverdiagram.png" width="300">
 
+Thats is all that is required to control the cars circuitry which i will know tell you how to construct
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Car**
+
+The cars circuitry will require a h-bridge which will control the motors therefore making the car maneouver aswell as an reciever that will recieve information transmitted from the controller which can then be used to move the car.
+
+There are two h-bridges that we can use; sheild or self made.
+
+**sheild**: sheild is the easier of the two and only requires you to place the sheild upon your arduino and connect the two motors and power supplies to its connections
+
+**Self made**: self made is harder but achieves the same result
 
 
 Connect the car circuitry to the chassis
