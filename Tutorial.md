@@ -6,7 +6,7 @@ This guide outlines how to setup the controller and motorised components of an R
 ### Components:
 * 2 arduinos (one for transmitting and one for receiving)
 
-![](Images/Arduino.jpg)
+<img src="Images/Arduino.jpg" width="300"  height="300">
 
 * 2 nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
 
@@ -60,6 +60,14 @@ It would be fair to say that if the chassis doesn’t work your likely hood of c
 ### Step 2- Circuitry
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Controller**
 
+The way the controller will work is by collecting 2 analog signals; one to indicate speed and the other to indicate direction. We will also have to construct the controller in a way where we can output the signals to the car
+
+<img src="Images/barebonesController.png" width="400">
+
+The radio frequency control relies on the nrf24L01 Transciver module to transimit packages of data from the controller
+![](Images/nrf24L01Transciverdiagram.png)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Car**
 
 
@@ -105,6 +113,7 @@ void loop()
   radio.write(&power, sizeof(power));
 }
 ```
+[Link to Source code](Code/CarTransmitterCode.ino)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RC Car code**
 
@@ -217,6 +226,7 @@ void loop()
   }
 }
 ```
+[Link to Source code](Code/CarRecieverCode.ino)
 
 ### conclusion
 
