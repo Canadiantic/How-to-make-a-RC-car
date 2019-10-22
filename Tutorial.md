@@ -3,7 +3,7 @@
 
 This guide outlines how to setup the controller and motorised components of an RC vehicle, this guide can be used as part of an outline for how to create a DIY remote control car. Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → here - Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
 
-### Components:
+## Components:
 * 2 arduinos (one for transmitting and one for receiving)
 
 <img src="Images/Arduino.jpg" width="300">
@@ -48,7 +48,7 @@ This guide outlines how to setup the controller and motorised components of an R
 
 There are many other ways to create an RC car, this is merely one of many potential designs 
 
-### Step 1- Chassis building:
+## Step 1- Chassis building:
 It would be fair to say that if the chassis doesn’t work your likely hood of creating a successful remote controlled car is slim.
 
 
@@ -58,7 +58,7 @@ It would be fair to say that if the chassis doesn’t work your likely hood of c
 
 
 ### Step 2- Circuitry
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Controller**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Controller**
 
 The way the controller will work is by collecting 2 analog signals; one to indicate speed and the other to indicate direction. We will also have to construct the controller in a way where we can output the signals to the car
 
@@ -69,7 +69,7 @@ The radio frequency control relies on the nrf24L01 Transciver module to transimi
 
 Thats is all that is required to control the cars circuitry which i will know tell you how to construct
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Car**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Car**
 
 The cars circuitry will require a h-bridge which will control the motors therefore making the car maneouver aswell as an reciever that will recieve information transmitted from the controller which can then be used to move the car.
 
@@ -87,14 +87,14 @@ The car also requires a wireless connection to the controller so we must impleme
 
 now that we have set up the circuitry we can now code the two arduinos so that we create an remote control car
 
-### Step 3- Code
+## Step 3- Code
 before we can do any coding we are going to require some Libraries in order to use radio communication which you can find below:
 SPI: https://github.com/PaulStoffregen/SPI/blob/master/SPI.h
 RF24: https://github.com/nRF24/RF24
 
 Now we are truly ready to start coding, lets begin with the controller's code
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Controller code**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Controller code**
 
 ```  
 //Include Libraries
@@ -174,7 +174,7 @@ Here is the final statements nessesary to understand this code. The first 2 func
 
 now that we have completed the transmitting of data we should probably see how to recieve and intrepret this information.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RC Car code**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**RC Car code**
 
 ```
 //Include Libraries
@@ -341,7 +341,7 @@ This snippet begins with and if statement that only runs if there is data availa
 The last pieces of in short i won't talk about in to much detail but what it does is it checks the values and accordingly moves the motors with respect to the values so that it can be controlled. I'm not going to analyse how this works exactly as I feel it is not an effective way to peform this function and there is definitatly room to improve this code which I challenge you to explore.
 
 Now that that is finished congratulations you have hopefully finished your remote control car have fun. If it is not working don't worry its fine and in the end your probably going to learn something from it, I'd reccomend you go back and make sure that your circuitry is properly configured, It is also a possibility that I have made a mistake somewhere so I encourage you to ask questions and to inovate on my configuration, good luck.
-### conclusion
+## conclusion
 
 
 
