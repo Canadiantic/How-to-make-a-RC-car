@@ -88,6 +88,12 @@ The car also requires a wireless connection to the controller so we must impleme
 now that we have set up the circuitry we can now code the two arduinos so that we create an remote control car
 
 ### Step 3- Code
+before we can do any coding we are going to require some Libraries in order to use radio communication which you can find below:
+SPI: https://github.com/PaulStoffregen/SPI/blob/master/SPI.h
+RF24: https://github.com/nRF24/RF24
+
+Now we are truly ready to start coding, lets begin with the controller's code
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Controller code**
 
 ```  
@@ -129,6 +135,44 @@ void loop()
 ```
 [Link to transmitter Source code](Code/CarTransmitterCode.ino)
 
+now if you don't understand what is happening, no worries here is quick and simple summary of what is happening here:
+```
+//Include Libraries
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+```
+The first few lines of code are header files which are used to declare the libaries it doesn't really matter what they do but just make sure you understand that they declare useful information needed for you arudino to transmit information.
+```
+//create an RF24 object
+RF24 radio(9, 8);  // CE, CSN
+
+//address through which two modules communicate.
+const byte address[6] = "00001";
+```
+The next lines create an RF24 object called radio with digital pin parameters 9 and 8 oresponding to the transmitters CE and CSN respectivly.
+We also define an adress(in this case 1) which this arduino will transmit over, it is important that the transmitters address and the recievers address is the same for the communication to work.
+```
+radio.begin();
+
+//set the address
+radio.openWritingPipe(address);
+
+//Set module as transmitter
+radio.stopListening();
+```
+Within the void setup function we encounter this code. The radio.begin(); statement runs a member function from our RF24 object radio defined earlier, the member function begins operation of the RF24 chip. the radio.openWritingPipe(address); statement runs another member function that takes our address from earlier and the pipe at the address for writing(transmitting information). The final line radio.stopListening(); then Stops the listening of incoming messages which is the final step needed before we can start transmitting our own data.
+```
+int left=map(analogRead(1), 0, 1023, -255, 254);
+int right=map(analogRead(0), 0, 1023, -255, 254);
+
+int power[2]={left,right};
+//Send message to receiver
+radio.write(&power, sizeof(power));
+```
+Here is the final statements nessesary to understand this code. The first 2 functions both read the 2 analog values that we are supplying to pins 0 and 1 and maps it between -255 to 254 before assignment. these 2 values are then put in an array called power in the thrid statement. the final statement here is radio.write(&power, sizeof(power)); where we use the RF24 object, radio to finally transmit our power object over the RF24 component. this process will repeat indefinetly(forever unless interupted) meaning that communication should occur constantly.
+
+now that we have completed the transmitting of data we should probably see how to recieve and intrepret this information.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RC Car code**
 
 ```
