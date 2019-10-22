@@ -218,10 +218,8 @@ int forward=0;
 int side=0;
 void loop()
 {
-  Serial.print("OOF");
   if (radio.available())
   {
-    Serial.print("hello?");
     int text[32] = {0};
     radio.read(&text, sizeof(text));
     //Serial.println(text[0]);
@@ -286,6 +284,62 @@ void loop()
 ```
 [Link to reciever Source code](Code/CarRecieverCode.ino)
 
+Now I will provide a quick synopsis on how the car's reciever code functions:
+```
+//Include Libraries
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+
+//create an RF24 object
+RF24 radio(9, 8);  // CE, CSN
+
+//address through which two modules communicate.
+const byte address[6] = "00001";
+```
+just like the transmitter's code we include our libraries headers, initialise a RF24 object and an adress(which is the same as the transmitters adress).
+```
+const int channel_a_enable  = 6;
+const int channel_a_input_1 = 4;
+const int channel_a_input_2 = 7;
+const int channel_b_enable  = 5;
+const int channel_b_input_3 = 3;
+const int channel_b_input_4 = 2;
+
+...
+
+  pinMode( channel_a_enable, OUTPUT );  // Channel A enable
+  pinMode( channel_a_input_1, OUTPUT ); // Channel A input 1
+  pinMode( channel_a_input_2, OUTPUT ); // Channel A input 2
+  
+  pinMode( channel_b_enable, OUTPUT );  // Channel B enable
+  pinMode( channel_b_input_3, OUTPUT ); // Channel B input 3
+  pinMode( channel_b_input_4, OUTPUT ); // Channel B input 4
+```
+Where the code starts to deviate from the transcievers is with the initialisation of the pins that we use to control our H-bridge
+```
+  radio.begin();
+  
+  //set the address
+  radio.openReadingPipe(0, address);
+  
+  //Set module as receiver
+  radio.startListening();
+```
+Once again we run radio.begin() to begin our chip but this time we run radio.openReadingPipe(0, address); which makes sense as this time we are reading instead of writing from the address. We then run radio.startListening(); which ends our recievers initialisation process allowing us to now recieve information from the transmitter.
+```
+if (radio.available())
+  {
+    int text[32] = {0};
+    radio.read(&text, sizeof(text));
+    forward=text[0];
+    side=text[1];
+```
+This snippet begins with and if statement that only runs if there is data available to read. We then read the information into an int array of length 32 using radio.read(&text, sizeof(text)) this text is then organised into individual variables.
+
+The last pieces of in short i won't talk about in to much detail but what it does is it checks the values and accordingly moves the motors with respect to the values so that it can be controlled. I'm not going to analyse how this works exactly as I feel it is not an effective way to peform this function and there is definitatly room to improve this code which I challenge you to explore.
+
+Now that that is finished congratulations you have hopefully finished your remote control car have fun. If it is not working don't worry its fine and in the end your probably going to learn something from it, I'd reccomend you go back and make sure that your circuitry is properly configured, It is also a possibility that I have made a mistake somewhere so I encourage you to ask questions and to inovate on my configuration, good luck.
 ### conclusion
 
 
