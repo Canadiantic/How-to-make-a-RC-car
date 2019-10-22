@@ -79,8 +79,13 @@ There are two h-bridges that we can use; sheild or self made.
 
 **Self made**: self made is harder but achieves the same result
 
+<img src="Images/HbridgeWiring.png" width="800">
 
-Connect the car circuitry to the chassis
+The car also requires a wireless connection to the controller so we must implement a way for them to communicate. Convieiniently it is pretty easy as we can reuse the controllers transmitter circuit to create this reciever
+
+<img src="Images/nrf24L01Transciverdiagram.png" width="300">
+
+now that we have set up the circuitry we can now code the two arduinos so that we create an remote control car
 
 ### Step 3- Code
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Controller code**
@@ -122,7 +127,7 @@ void loop()
   radio.write(&power, sizeof(power));
 }
 ```
-[Link to Source code](Code/CarTransmitterCode.ino)
+[Link to transmitter Source code](Code/CarTransmitterCode.ino)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RC Car code**
 
@@ -235,7 +240,7 @@ void loop()
   }
 }
 ```
-[Link to Source code](Code/CarRecieverCode.ino)
+[Link to reciever Source code](Code/CarRecieverCode.ino)
 
 ### conclusion
 
