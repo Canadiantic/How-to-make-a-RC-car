@@ -173,6 +173,7 @@ radio.write(&power, sizeof(power));
 Here is the final statements nessesary to understand this code. The first 2 functions both read the 2 analog values that we are supplying to pins 0 and 1 and maps it between -255 to 254 before assignment. these 2 values are then put in an array called power in the thrid statement. the final statement here is radio.write(&power, sizeof(power)); where we use the RF24 object, radio to finally transmit our power object over the RF24 component. this process will repeat indefinetly(forever unless interupted) meaning that communication should occur constantly.
 
 now that we have completed the transmitting of data we should probably see how to recieve and intrepret this information.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RC Car code**
 
 ```
