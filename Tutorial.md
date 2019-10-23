@@ -50,13 +50,17 @@ This guide outlines how to setup the controller and motorised components of an R
 There are many other ways to create an RC car, this is merely one of many potential designs 
 
 ## Chassis building:
-It would be fair to say that if the chassis doesn’t work your likely hood of creating a successful remote controlled car is slim. This is probably also the most easy step in the process
+It would be fair to say that if the chassis doesn’t work your likely hood of creating a successful remote controlled car is slim, making this one of most vital steps. With that being said this is probably also the most easy step in the process. 
 
 There are of course many ways to create a chassis this is probably one of the most simplest so your we encourage you to change the design
 
+<img src="Images/MotorsOnChassis.jpg" width="300">
+
 Firstly you will want to screw and bolt on both motors to their respective side of the chassis.
 
-Then we will want to scre
+<img src="Images/SwivelCastorOnChassis.jpg" width="300">
+
+Then we will want to screw on the castor onto the top of the chassis
 
 And with that the chassis is finished 
 
