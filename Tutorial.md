@@ -1,7 +1,7 @@
-# How to make a RC car
+# How to make a remote control car
 ## A comprehensive tutorial on how to create a remote controlled car using arduinos.
 
-This guide outlines how to setup the controller and motorised components of an RC vehicle, this guide can be used as part of an outline for how to create a DIY remote control car. Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → [Here](https://github.com/Canadiantic/How-to-make-a-RC-car/blob/master/Tutorial.md)
+Wireless communication used to control vechiles has been around for awichle, unfortunaltly understanding and actually implementing this is difficult especially when many tutorials are hard to find and convaluted. This tutorial aim to caters for people with limited programming and electronic understanding to give them that much desired knowledge. In this guide will show you how to setup controls and motorised components to create an RC vehicle. This tutorial will teach you the basics of  Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → [Here](https://github.com/Canadiantic/How-to-make-a-RC-car/blob/master/Tutorial.md)
  -Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
 
 ## Components:
