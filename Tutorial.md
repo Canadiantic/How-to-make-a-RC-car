@@ -1,7 +1,8 @@
 # How to make a RC car
-## A tutorial on how to create a remote controlled car using arduinos.
+## A comprehensive tutorial on how to create a remote controlled car using arduinos.
 
-This guide outlines how to setup the controller and motorised components of an RC vehicle, this guide can be used as part of an outline for how to create a DIY remote control car. Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → here - Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
+This guide outlines how to setup the controller and motorised components of an RC vehicle, this guide can be used as part of an outline for how to create a DIY remote control car. Now if you haven’t checked out the tutorial on how to create wireless communications we’d recommend you check it out → [Here](https://github.com/Canadiantic/How-to-make-a-RC-car/blob/master/Tutorial.md)
+ -Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
 
 ## Components:
 * 2 arduinos (one for transmitting and one for receiving)
@@ -58,7 +59,7 @@ It would be fair to say that if the chassis doesn’t work your likely hood of c
 
 
 ### Step 2- Circuitry
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Controller**
+### **Controller**
 
 The way the controller will work is by collecting 2 analog signals; one to indicate speed and the other to indicate direction. We will also have to construct the controller in a way where we can output the signals to the car
 
@@ -69,7 +70,7 @@ The radio frequency control relies on the nrf24L01 Transciver module to transimi
 
 Thats is all that is required to control the cars circuitry which i will know tell you how to construct
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Car**
+### **Car**
 
 The cars circuitry will require a h-bridge which will control the motors therefore making the car maneouver aswell as an reciever that will recieve information transmitted from the controller which can then be used to move the car.
 
@@ -94,7 +95,7 @@ RF24: https://github.com/nRF24/RF24
 
 Now we are truly ready to start coding, lets begin with the controller's code
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**Controller code**
+### **Controller code**
 
 ```  
 //Include Libraries
@@ -174,7 +175,7 @@ Here is the final statements nessesary to understand this code. The first 2 func
 
 now that we have completed the transmitting of data we should probably see how to recieve and intrepret this information.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###**RC Car code**
+### **RC Car code**
 
 ```
 //Include Libraries
