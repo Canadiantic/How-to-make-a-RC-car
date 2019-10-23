@@ -5,35 +5,35 @@ This guide outlines how to setup the controller and motorised components of an R
  -Its not compulsory to complete this tutorial but it will give you a better idea of how the RC car functions.
 
 ## Components:
-* 2 arduinos (one for transmitting and one for receiving)
+* 2 X arduinos (one for transmitting and one for receiving)
 
 <img src="Images/Arduino.jpg" width="300">
 
-* 2 nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
+* 2 X nRF24L01+ Wireless Modules (you can use other modules but you will have to figure out how to wire them yourself)
 
 <img src="Images/nrf24l01.jpg" width="300">
 
-* Male to Female Jump wires (you’ll need 10)
+* 14 X Male to Female Jump wires
 
 <img src="Images/maletofemalepins.jpg" width="300">
 
-* Male to Male Jumper wires
+*  Male to Male Jumper wires
 
 <img src="Images/maletomalepins.jpg" width="300">
 
-* 2 joysticks
+* 2 X joysticks(preferably but anything that can give a range of analog signals will work.)
 
 <img src="Images/joystick.jpg" width="300">
 
-* 1 bread board
+* 1 X bread board
 
 <img src="Images/breadboard.jpg" width="300">
 
-* 2 motors(with wheels)
+* 2 X motors(with wheels)
 
 <img src="Images/Motorwithwheel.jpg" width="300">
 
-* Chassis base
+* 1 XChassis base
 
 <img src="Images/Chassisbase.png" width="300">
 
