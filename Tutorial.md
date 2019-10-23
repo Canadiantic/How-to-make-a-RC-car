@@ -49,16 +49,22 @@ This guide outlines how to setup the controller and motorised components of an R
 
 There are many other ways to create an RC car, this is merely one of many potential designs 
 
-## Step 1- Chassis building:
-It would be fair to say that if the chassis doesn’t work your likely hood of creating a successful remote controlled car is slim.
+## Chassis building:
+It would be fair to say that if the chassis doesn’t work your likely hood of creating a successful remote controlled car is slim. This is probably also the most easy step in the process
 
+There are of course many ways to create a chassis this is probably one of the most simplest so your we encourage you to change the design
 
+Firstly you will want to screw and bolt on both motors to their respective side of the chassis.
+<img scr="Images/SwivelCastorOnChassis.jpg" width="300">
 
-(insert image of chassis)
+Then we will want to scre
+<img scr="Images/MotorsOnChassis.jpg" width="300">
 
+And with that the chassis is finished 
 
+## Circuitry
+//little introduction to the circuitry.
 
-### Step 2- Circuitry
 ### **Controller**
 
 The way the controller will work is by collecting 2 analog signals; one to indicate speed and the other to indicate direction. We will also have to construct the controller in a way where we can output the signals to the car
@@ -88,7 +94,7 @@ The car also requires a wireless connection to the controller so we must impleme
 
 now that we have set up the circuitry we can now code the two arduinos so that we create an remote control car
 
-## Step 3- Code
+## Code
 before we can do any coding we are going to require some Libraries in order to use radio communication which you can find below:
 SPI: https://github.com/PaulStoffregen/SPI/blob/master/SPI.h
 RF24: https://github.com/nRF24/RF24
