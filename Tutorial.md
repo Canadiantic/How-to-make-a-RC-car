@@ -55,10 +55,8 @@ It would be fair to say that if the chassis doesn’t work your likely hood of c
 There are of course many ways to create a chassis this is probably one of the most simplest so your we encourage you to change the design
 
 Firstly you will want to screw and bolt on both motors to their respective side of the chassis.
-<img scr="Images/SwivelCastorOnChassis.jpg" width="300">
 
 Then we will want to scre
-<img scr="Images/MotorsOnChassis.jpg" width="300">
 
 And with that the chassis is finished 
 
